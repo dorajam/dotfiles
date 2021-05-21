@@ -1,0 +1,28 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = dorajambor
+	email = dorajambor@gmail.com
+[push]
+	default = simple
+[credential]
+	helper = manager
+[alias]
+	last = log -1 HEAD
+	co = checkout
+	br = branch
+	ci = commit
+	gst = status
+	gp = git push
+	unstage = reset HEAD --
+	shortlog = git log --graph --decorate --pretty=oneline --abbrev-commit --all
+	pup = push --set-upstream origin master
+	cim = commit -m
+[core]
+	excludesfile = ~/.gitignore
+[url "https://github.com/"]
+	insteadOf = git://github.com/
+[init]
+	templatedir = ~/.git_template
