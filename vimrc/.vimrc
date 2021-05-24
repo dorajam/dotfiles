@@ -7,6 +7,9 @@ nmap <CR> :w<CR>
 " Exc mapped to jk
 :imap jk <Esc>
 
+" use fzf fuzzy search while in vim by ctrl f
+nnoremap <silent> <C-f> :Files<CR>
+
 " highlight syntax given file extensions
 syntax on
 set synmaxcol=100000
@@ -43,7 +46,7 @@ set clipboard=unnamed
 
 call plug#begin('~/.vim/autoload')
 
-" shows directory structure on the left
+" search across directories
 Plug 'scrooloose/nerdtree'
 
 " linter
@@ -91,7 +94,9 @@ color summerfruit256   " this is white yay!
 
 " USEFUL EXTENSIONS
 " nerdtree show/hide directory overview
-map <leader><CR> :NERDTreeToggle<CR>
+" ctrl n and t
+nnoremap <C-n> :NERDTree<CR>   
+nnoremap <C-s> :NERDTreeToggle<CR>
 
 " Ctags - go to function definition functionality
 set tags+=$HOME/.git/tags

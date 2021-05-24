@@ -5,9 +5,14 @@ eval "$(pyenv virtualenv-init -)"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/Dora/.oh-my-zsh
+
+# Aliases
 alias vi='vim'
 alias sa='source activate'
 alias ca='conda activate'
+
+# Default setting for fzf search: --multi allows to select multiple files with Tab, heigh resizes the fullscreen window to smaller size
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border --multi'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
